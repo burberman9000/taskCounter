@@ -53,7 +53,7 @@ body {
         font-family: 'Roboto Condensed', sans-serif;
     }
     .button {
-        width: 130%;
+        width: 230px;
         height: 5%;
         background-color: rgba(183, 183, 235, 0.137);
         border-radius: 1em;
@@ -73,7 +73,7 @@ body {
     width: 25px;
     height: 25px;
     background-size: cover;
-    background-image: url('/taskCounter/img/done.png');
+    background-image: url('../img/done.png');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
