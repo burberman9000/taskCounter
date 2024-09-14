@@ -1,9 +1,10 @@
 const number = document.querySelector('.number__holder');
 const button = document.querySelector('.button');
+const done = document.querySelectorAll('.done');
 let initNum = 0;
 
 number.innerHTML = initNum;
-
+number.style.color = 'red';
 const switcher = () => {
     initNum++;
     number.innerHTML = initNum;
@@ -13,10 +14,15 @@ const switcher = () => {
         number.style.color = 'orange';
     } else if (initNum >= 20 && initNum <= 30) {
         number.style.color = 'yellow';
-    } else if (initNum >= 30 && initNum <= 48) {
+    } else if (initNum >= 30 && initNum < 48) {
         number.style.color = 'blue';
     } else {
-        number.style.color = 'lightblue';
+        done.forEach((item, index) => {
+            if (index == 1) {
+                // item.classList.remove('hide');
+                item.style.opacity = '1';
+            }
+        });
     }
 };
 
