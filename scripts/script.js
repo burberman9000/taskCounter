@@ -9,7 +9,6 @@ let lightMode = false;
 number.innerHTML = initNum;
 
 const switcher = () => {
-    initNum++;
     localStorage.setItem('score', initNum);
     number.innerHTML = initNum;
     if (initNum < 10) {
@@ -23,6 +22,7 @@ const switcher = () => {
     } else {
         number.style.color = 'lightblue';
     }
+    initNum++;
 };
 
 increaseButton.addEventListener('click', switcher);
