@@ -1,7 +1,7 @@
-const number = document.querySelector('.number__holder');
-const button = document.querySelector('.button.increaseScore');
-const themeSwitcher = document.querySelector('.buttonLightSwitcher');
-const resetButton = document.querySelector('.resetScore');
+const number = document.querySelector('.counter__number');
+const increaseButton = document.querySelector('.counter__button--increase');
+const themeSwitcher = document.querySelector('.counter__button--theme-switcher');
+const resetButton = document.querySelector('.counter__button--reset');
 const body = document.querySelector('body');
 let initNum = 0;
 let lightMode = false;
@@ -25,10 +25,10 @@ const switcher = () => {
     }
 };
 
-button.addEventListener('click', switcher);
+increaseButton.addEventListener('click', switcher);
 
 const themeApplier = () => {
-    lightMode = !lightMode; // Toggle lightMode
+    lightMode = !lightMode;
     if (lightMode) {
         body.style.backgroundColor = 'white';
         localStorage.setItem('lightMode', true);
@@ -43,7 +43,7 @@ const initGame = () => {
     if (currentScore) {
         initNum = currentScore;
         number.innerHTML = initNum;
-        // Update color based on the score
+
         switcher();
     }
     let currentTheme = localStorage.getItem('lightMode');
@@ -57,7 +57,7 @@ const initGame = () => {
 };
 
 const scoreReseter = () => {
-    localStorage.removeItem('score'); // Correct way to remove score
+    localStorage.removeItem('score');
     number.style.color = 'white';
     initNum = 0;
     number.innerHTML = initNum;
