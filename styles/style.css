@@ -30,6 +30,7 @@ body {
     display: flex;
     justify-content: center;
     width: 550px;
+    user-select: none;
 }
 
 .counter__button {
